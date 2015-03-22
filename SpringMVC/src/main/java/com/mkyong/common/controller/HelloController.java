@@ -30,7 +30,7 @@ public class HelloController {
 
 	}*/
         
-        public ModelAndView welcomePage() {
+        public ModelAndView welcome() {
 
 		ModelAndView model = new ModelAndView();
 		model.addObject("message", "Strona powitalna!");
