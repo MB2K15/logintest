@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/home")
@@ -15,7 +16,7 @@ public class HelloController {
     private String login_1 = "mateusz" , password_1 = "bca";
 
 	@RequestMapping(method = RequestMethod.GET)
-	public String printWelcome(ModelMap model) {
+	/*public String printWelcome(ModelMap model) {
 
             
             Person pe = new Person();
@@ -26,6 +27,15 @@ public class HelloController {
 		model.addAttribute("Person",pe);
 		return "hello";
         
+
+	}*/
+        
+        public ModelAndView welcomePage() {
+
+		ModelAndView model = new ModelAndView();
+		model.addObject("message", "Strona powitalna!");
+		model.setViewName("hello");
+		return model;
 
 	}
         
