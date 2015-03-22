@@ -1,20 +1,52 @@
 package com.mkyong.common.controller;
 
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/welcome")
+@RequestMapping("/home")
 public class HelloController {
+    
+    
+    private String login = "mateusz" , password = "abc";
+    private String login_1 = "mateusz" , password_1 = "bca";
 
 	@RequestMapping(method = RequestMethod.GET)
 	public String printWelcome(ModelMap model) {
 
-		model.addAttribute("message", "SUPER STRING");
+            
+            Person pe = new Person();
+            pe.setName("Mateusz");
+            pe.setAge(100);
+            
+            
+		model.addAttribute("Person",pe);
 		return "hello";
+        
 
 	}
+        
+        public void check(){
+        
+        if(login.equals(login_1 )&& password.equals(password_1))
+          
+                System.out.println("good");
+        
+        else
+                System.out.println("not acces");
+        
+        
+        
+        
+        
+        }
+       
+        
+        
+        
+        
 	
 }
