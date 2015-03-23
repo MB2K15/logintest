@@ -1,0 +1,10 @@
+# IntelliJ
+.idea/
+*.isw
+*.iml
+
+SpringMVC/.idea/
+SpringMVC/target/**
+SpringMVC/log/**
+
+.*~
