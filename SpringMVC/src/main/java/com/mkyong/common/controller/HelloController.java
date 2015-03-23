@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/home")
+ @RequestMapping("/login")
 public class HelloController {
     
-    
+   
     private String login = "mateusz" , password = "abc";
     private String login_1 = "mateusz" , password_1 = "bca";
 
@@ -34,10 +34,12 @@ public class HelloController {
 
 		ModelAndView model = new ModelAndView();
 		model.addObject("message", "Strona powitalna!");
-		model.setViewName("hello");
+		model.setViewName("login");
 		return model;
 
 	}
+        
+       
         
         public void check(){
         
