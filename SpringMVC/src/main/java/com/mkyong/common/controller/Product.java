@@ -50,9 +50,15 @@ public class Product {
     public void setNumber(short number) {
         this.number = number;
     }
-    
-    
-    
-    
-    
+
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", category='" + category + '\'' +
+                ", price=" + price +
+                ", number=" + number +
+                '}';
+    }
 }

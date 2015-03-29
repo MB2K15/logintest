@@ -29,13 +29,12 @@ import org.springframework.web.servlet.ModelAndView;
     
     
     
-    @RequestMapping(value = "/add"  , method=RequestMethod.POST)
+    @RequestMapping(value = "/save"  , method=RequestMethod.POST)
     public String save (Product product){
         
         System.out.println(product);
         
         return "info";
-        
         
     }
     

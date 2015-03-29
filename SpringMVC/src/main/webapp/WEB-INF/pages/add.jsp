@@ -14,7 +14,7 @@
     <body>
         <h1>Dodaj produkt:</h1>
         
-        <form action="info" method="post">
+        <form action="save" method="post">
           <table> 
               <tr>
                   <td>Nazwa:</td>
