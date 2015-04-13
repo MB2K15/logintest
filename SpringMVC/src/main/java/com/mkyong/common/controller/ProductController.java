@@ -17,22 +17,26 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
  public class ProductController {
     
-    
-   @RequestMapping("/add")
+    /**
+     *
+     * @return
+     */
+    @RequestMapping(value = "/add")
     public ModelAndView add (){
     
         ModelAndView model = new ModelAndView("/add");
         model.addObject("product", new Product());
-        
+       
         return model;
+        
     }
     
     
     
-    @RequestMapping(value = "/save"  , method=RequestMethod.POST)
+    @RequestMapping(value = "/save" , method =RequestMethod.POST)
     public String save (Product product){
         
-        System.out.println(product);
+        System.out.println(product.toString());
         
         return "info";
         
