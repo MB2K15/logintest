@@ -17,7 +17,13 @@ public class Product {
     private String name;
     private String category;
     private float price;
-    private short number;
+    private short number; 
+    
+    
+   
+    
+
+    
 
     public String getName() {
         return name;
@@ -52,6 +58,8 @@ public class Product {
     }
 
 
+   
+   
     @Override
     public String toString() {
         return "Product{" +
@@ -60,5 +68,8 @@ public class Product {
                 ", price=" + price +
                 ", number=" + number +
                 '}';
+        
     }
+    
+    
 }
