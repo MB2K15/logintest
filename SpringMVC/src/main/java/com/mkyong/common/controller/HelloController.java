@@ -54,6 +54,27 @@ public class HelloController {
     return model;
     
     }
+    
+    @RequestMapping(value = "/nowa")
+  public ModelAndView metodka(){
+      
+      
+      ModelAndView model = new ModelAndView();
+      model.addObject("person", new Person());
+      return model;
+  }
+    
+   @RequestMapping(value = "/save_person" , method =RequestMethod.POST)
+    public String save (Person person){
+        
+        System.out.println(person.toString());
+        
+        return "info";
+        
+    }
+    
+    
+    
 
     //Funkcja sprawdza poprawnosc loginu i hasla
     public boolean checkLoginAndPassword(String login, String password) {
