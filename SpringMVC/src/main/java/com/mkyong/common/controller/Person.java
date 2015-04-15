@@ -14,17 +14,17 @@ package com.mkyong.common.controller;
 public class Person {
     
     
-    private String name;
+    private String Name;
     private int age ;
-    private String Last_name;
+    private String Last_Name;
 
     
     public String getName() {
-        return name;
+        return Name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.Name = name;
     }
 
     public int getAge() {
@@ -36,11 +36,17 @@ public class Person {
     }
 
     public String getLast_name() {
-        return Last_name;
+        return Last_Name;
     }
 
     public void setLast_name(String Last_name) {
-        this.Last_name = Last_name;
+        this.Last_Name = Last_name;
+    }
+    
+
+    @Override
+    public String toString() {
+        return "Person{" + "Name=" + Name + ", age=" + age + ", Last_Name=" + Last_Name + '}';
     }
     
     
