@@ -7,8 +7,14 @@
 	<version>1.0-SNAPSHOT</version>
 	<name>SpringMVC Maven Webapp</name>
 	<url>http://maven.apache.org</url>
-
-	<properties>
+ <repositories>
+  <repository>
+   <id>unknown-jars-temp-repo</id>
+   <name>A temporary repository created by NetBeans for libraries and jars it could not identify. Please replace the dependencies in this repository with correct ones and delete this repository.</name>
+   <url>file:${project.basedir}/lib</url>
+  </repository>
+ </repositories>
+ <properties>
 		<spring.version>3.0.5.RELEASE</spring.version>
 	</properties>
 
@@ -30,14 +36,25 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>${spring.version}</version>
+			<version>3.2.8.RELEASE</version>
+		 <type>jar</type>
 		</dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
             <version>${spring.version}</version>
         </dependency>
-
+        
+    
+ 
+                <!-- connect to mysql -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.6</version>
+		</dependency>
+        
+        
         <dependency>
             <groupId>org.apache.derby</groupId>
             <artifactId>derby</artifactId>
@@ -49,8 +66,34 @@
 			<artifactId>hibernate-validator</artifactId>
 			<version>4.2.0.Final</version>
 		</dependency>
-
-
-    </dependencies>
+	 <dependency>
+	  <groupId>org.hibernate</groupId>
+	  <artifactId>hibernate-entitymanager</artifactId>
+	  <version>4.3.1.Final</version>
+	 </dependency>
+	 <dependency>
+	  <groupId>unknown.binary</groupId>
+	  <artifactId>hibernate-jpa-2.1-api-1.0.0.Final</artifactId>
+	  <version>SNAPSHOT</version>
+	 </dependency>
+	 <dependency>
+	  <groupId>org.springframework.security</groupId>
+	  <artifactId>spring-security-core</artifactId>
+	  <version>3.2.3.RELEASE</version>
+	  <type>jar</type>
+	 </dependency>
+	 <dependency>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-context</artifactId>
+	  <version>4.0.5.RELEASE</version>
+	  <type>jar</type>
+	 </dependency>
+	 <dependency>
+	  <groupId>org.springframework.security</groupId>
+	  <artifactId>spring-security-config</artifactId>
+	  <version>3.2.3.RELEASE</version>
+	  <type>jar</type>
+	 </dependency>
+	</dependencies>
 
 </project>
