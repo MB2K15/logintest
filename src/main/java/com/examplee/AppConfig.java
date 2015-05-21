@@ -9,12 +9,10 @@ package com.examplee;
  *
  * @author Matt
  */
+
 import org.springframework.context.annotation.Bean;
-import com.examplee.SecurityConfig;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-//import org.springframework.web.servlet.view.InternalResourceViewResolver;
-//import org.springframework.web.servlet.view.JstlView;
- 
+
 
 
 public class AppConfig {

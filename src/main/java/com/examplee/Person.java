@@ -6,24 +6,21 @@
 package com.examplee;
 
 import org.hibernate.validator.constraints.NotEmpty;
-//import org.hibernate.validator.constraints.Range;
 
 
 
 /**
- *
  * @author Matt
  */
 public class Person {
-    
-    
+
+
     @NotEmpty
     private String Name;
     @NotEmpty
     private String Lname;
-    private int age ;
+    private int age;
 
-    
 
     public String getName() {
         return Name;
@@ -48,18 +45,12 @@ public class Person {
     public void setLname(String Lname) {
         this.Lname = Lname;
     }
-    
-   
-    
-    
+
+
     @Override
     public String toString() {
         return "Person{" + "Name=" + Name + ", Lname=" + Lname + ", age=" + age + '}';
     }
-    
-    
 
-   
-    
-    
+
 }
